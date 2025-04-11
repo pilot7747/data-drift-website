@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import TrackCard from '@/components/TrackCard';
 import { Track, loadTracks, getTracksByType } from '@/lib/content';
+import { FaSpotify } from 'react-icons/fa';
 
 export default function Home() {
   const [myTracks, setMyTracks] = useState<Track[]>([]);
@@ -60,7 +61,7 @@ export default function Home() {
               Professional audio engineering services to make your music sound its absolute best.
               Specializing in indie, electronic, and rock productions.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-4 mb-4">
               <Link href="/portfolio" className="bg-primary hover:bg-primary-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
                 View Portfolio
               </Link>
@@ -68,6 +69,14 @@ export default function Home() {
                 Get in Touch
               </Link>
             </div>
+            <a 
+              href="https://open.spotify.com/artist/3iuFNiMtaGXvLuXLb1IeBP?si=jL9wLXjTQbCDRie2haOgGg" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-gray-400 hover:text-green-500 transition-colors duration-300 mt-2"
+            >
+              <FaSpotify className="mr-2" /> Listen on Spotify
+            </a>
           </motion.div>
           
           <motion.div

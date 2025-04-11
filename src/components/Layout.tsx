@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaGithub, FaSoundcloud, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaSoundcloud, FaInstagram, FaSpotify } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 interface LayoutProps {
@@ -88,6 +88,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <SocialLink href="https://github.com/pilot7747" icon={<FaGithub size={20} />} />
               <SocialLink href="https://soundcloud.com/data-drift" icon={<FaSoundcloud size={20} />} />
               <SocialLink href="https://instagram.com/datadriftmusic" icon={<FaInstagram size={20} />} />
+              <SocialLink href="https://open.spotify.com/artist/3iuFNiMtaGXvLuXLb1IeBP?si=jL9wLXjTQbCDRie2haOgGg" icon={<FaSpotify size={20} />} />
             </div>
           </div>
           
