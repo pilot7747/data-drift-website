@@ -9,24 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
+    "autoprefixer": "^10.4.17",
+    "framer-motion": "^11.0.3",
+    "howler": "^2.2.4",
     "next": "^14.1.0",
+    "postcss": "^8.4.33",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "yaml": "^2.3.4",
     "react-icons": "^5.0.1",
-    "howler": "^2.2.4",
     "tailwindcss": "^3.4.1",
-    "postcss": "^8.4.33",
-    "autoprefixer": "^10.4.17",
-    "framer-motion": "^11.0.3"
+    "yaml": "^2.3.4"
   },
   "devDependencies": {
+    "@types/howler": "^2.2.11",
     "@types/node": "^20.11.10",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
-    "@types/howler": "^2.2.11",
-    "typescript": "^5.3.3",
     "eslint": "^8.56.0",
-    "eslint-config-next": "^14.1.0"
+    "eslint-config-next": "^14.1.0",
+    "typescript": "^5.3.3"
   }
-} 
+}

@@ -2,6 +2,7 @@ import './globals.css';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import type { Metadata } from 'next';
 import React from 'react';
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="bg-dark-500">
         {children}
+        <Analytics />
       </body>
     </html>
   );
