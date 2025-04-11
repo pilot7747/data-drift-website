@@ -1,0 +1,115 @@
+- title: "Comet"
+  artist: "Ricky Legend"
+  description: "Mix and master of a pop song"
+  type: "mix"
+  tags:
+    - mix
+    - master
+  genre:
+    - pop
+    - indie
+    - electronic
+  file: "Comet"
+- title: "Gokyuzu"
+  artist: "Salon 8"
+  description: "Mix and master of a Turkish indie rock song"
+  type: "mix"
+  tags:
+    - mix
+    - master
+  genre:
+    - indie
+    - rock
+  file: "Gokyuzu"
+- title: "Get Out of Bed"
+  artist: "Magician's Nephew"
+  description: "Mix and master of a rock song"
+  type: "mix"
+  tags:
+    - mix
+    - master
+  genre:
+    - rock
+  file: "Get Out of Bed"
+- title: "Hold Me"
+  artist: "cryonicPAX"
+  description: "Mix and master of a dubstep song"
+  type: "mix"
+  tags:
+    - mix
+    - master
+  genre:
+    - dubstep
+  file: "Hold Me"
+- title: "What I Want"
+  artist: "The Brew"
+  description: "Mix and master of a rock song"
+  type: "mix"
+  tags:
+    - mix
+    - master
+  genre:
+    - rock
+  file: "What I Want"
+- title: "Whiptails"
+  artist: "Albert Kader"
+  description: "Mix and master of a techno song"
+  type: "mix"
+  tags:
+    - mix
+    - master
+  genre:
+    - techno
+  file: "Whiptails"
+- title: "Tochka"
+  artist: "Pepelpovetru"
+  description: "Mix and master of a Russian rock song"
+  type: "mix"
+  tags:
+    - mix
+    - master
+  genre:
+    - rock
+  file: "Tochka"
+- title: "PENGUINS AND POLARBEARS"
+  artist: "Millencolin (cover)"
+  description: "Mix and master of a pop punk song"
+  type: "mix"
+  tags:
+    - mix
+    - master
+  genre:
+    - pop
+    - punk
+  file: "PENGUINS AND POLARBEARS"
+- title: "Wish List (Slowed + Reverbed)"
+  artist: "Data Drift"
+  description: "Chill phonk song"
+  type: "my"
+  tags:
+    - my
+    - mix
+    - master
+  genre:
+    - phonk
+  file: "Wish List (Slowed + Reverbed)"
+- title: "Dark Dreams"
+  artist: "Data Drift"
+  description: "Old school phonk song"
+  type: "my"
+  tags:
+    - my
+    - mix
+    - master
+  genre:
+    - phonk
+  file: "Dark Dreams"
+- title: "Session (live)"
+  artist: "Juul"
+  description: "Master of my wifes's DJ session"
+  type: "friend"
+  tags:
+    - master
+  genre:
+    - electronic
+  file: "Juul (live)"
