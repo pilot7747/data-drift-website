@@ -1,3 +1,24 @@
+- title: "Whiptails"
+  artist: "Albert Kader"
+  description: "Mix and master of a techno song"
+  type: "mix"
+  tags:
+    - mix
+    - master
+  genre:
+    - techno
+  file: "Whiptails"
+- title: "PENGUINS AND POLARBEARS"
+  artist: "Millencolin (cover)"
+  description: "Mix and master of a pop punk song"
+  type: "mix"
+  tags:
+    - mix
+    - master
+  genre:
+    - pop
+    - punk
+  file: "PENGUINS AND POLARBEARS"
 - title: "Comet"
   artist: "Ricky Legend"
   description: "Mix and master of a pop song"
@@ -21,16 +42,6 @@
     - indie
     - rock
   file: "Gokyuzu"
-- title: "Get Out of Bed"
-  artist: "Magician's Nephew"
-  description: "Mix and master of a rock song"
-  type: "mix"
-  tags:
-    - mix
-    - master
-  genre:
-    - rock
-  file: "Get Out of Bed"
 - title: "Hold Me"
   artist: "cryonicPAX"
   description: "Mix and master of a dubstep song"
@@ -41,26 +52,6 @@
   genre:
     - dubstep
   file: "Hold Me"
-- title: "What I Want"
-  artist: "The Brew"
-  description: "Mix and master of a rock song"
-  type: "mix"
-  tags:
-    - mix
-    - master
-  genre:
-    - rock
-  file: "What I Want"
-- title: "Whiptails"
-  artist: "Albert Kader"
-  description: "Mix and master of a techno song"
-  type: "mix"
-  tags:
-    - mix
-    - master
-  genre:
-    - techno
-  file: "Whiptails"
 - title: "Tochka"
   artist: "Pepelpovetru"
   description: "Mix and master of a Russian rock song"
@@ -71,17 +62,26 @@
   genre:
     - rock
   file: "Tochka"
-- title: "PENGUINS AND POLARBEARS"
-  artist: "Millencolin (cover)"
-  description: "Mix and master of a pop punk song"
+- title: "What I Want"
+  artist: "The Brew"
+  description: "Mix and master of a rock song"
   type: "mix"
   tags:
     - mix
     - master
   genre:
-    - pop
-    - punk
-  file: "PENGUINS AND POLARBEARS"
+    - rock
+  file: "What I Want"
+- title: "Get Out of Bed"
+  artist: "Magician's Nephew"
+  description: "Mix and master of a rock song"
+  type: "mix"
+  tags:
+    - mix
+    - master
+  genre:
+    - rock
+  file: "Get Out of Bed"
 - title: "Wish List (Slowed + Reverbed)"
   artist: "Data Drift"
   description: "Chill phonk song"
