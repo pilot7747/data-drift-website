@@ -15,14 +15,18 @@ const CDN_BASE_URL = 'https://storage.googleapis.com/data-drift-audio';
  */
 export function getAudioUrl(filename: string, format: string = 'mp3'): string {
   const fileExtension = format === 'original' ? '' : '.' + format;
+  const fullFilename = `${filename}${fileExtension}`;
+  
+  // Properly encode the filename to handle spaces and special characters
+  const encodedFilename = encodeURIComponent(fullFilename);
   
   // In production, use the CDN URL
   if (isProd) {
-    return `${CDN_BASE_URL}/${filename}${fileExtension}`;
+    return `${CDN_BASE_URL}/${encodedFilename}`;
   }
   
   // In development, use the local path
-  return `/files/${filename}${fileExtension}`;
+  return `/files/${encodedFilename}`;
 }
 
 /**
