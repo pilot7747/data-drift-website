@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
-import { Track } from '@/lib/content';
 
 // MP3 files have priority - this maps from the original file names to MP3 versions
 const MP3_EXTENSIONS = ['.mp3', '.MP3'];
@@ -14,7 +13,7 @@ export async function GET(
 ) {
   try {
     // Reconstruct the path from the path segments
-    const filePath = path.join(process.cwd(), 'files', ...params.path);
+    const filePath = path.join(process.cwd(), 'public', 'files', ...params.path);
     
     // If a specific extension is requested
     if (path.extname(filePath)) {
@@ -100,7 +99,9 @@ export async function GET(
       }
     }
     
-    return new NextResponse('File not found', { status: 404 });
+    // If file not found, log the attempted path for debugging
+    console.error(`File not found: ${filePath}`);
+    return new NextResponse(`File not found: ${params.path.join('/')}`, { status: 404 });
   } catch (error) {
     console.error('Error serving audio file:', error);
     return new NextResponse('Internal server error', { status: 500 });
