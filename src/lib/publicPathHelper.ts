@@ -1,11 +1,5 @@
 // Helper functions for working with public paths
 
-// Check if we're in production mode
-const isProd = process.env.NODE_ENV === 'production';
-
-// You can replace this with a real CDN URL where you'll host your audio files
-const CDN_BASE_URL = 'https://storage.googleapis.com/data-drift-audio';
-
 /**
  * Get the file URL for a track with the specified format
  * 
@@ -20,12 +14,7 @@ export function getAudioUrl(filename: string, format: string = 'mp3'): string {
   // Properly encode the filename to handle spaces and special characters
   const encodedFilename = encodeURIComponent(fullFilename);
   
-  // In production, use the CDN URL
-  if (isProd) {
-    return `${CDN_BASE_URL}/${encodedFilename}`;
-  }
-  
-  // In development, use the local path
+  // Use local files
   return `/files/${encodedFilename}`;
 }
 
