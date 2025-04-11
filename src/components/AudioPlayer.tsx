@@ -4,6 +4,7 @@ import { FaPlay, FaPause, FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Track } from '@/lib/content';
 import { getAudioUrl } from '@/lib/publicPathHelper';
+import { useAudio } from '@/lib/AudioContext';
 
 interface AudioPlayerProps {
   track: Track;
@@ -21,8 +22,21 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ track, compact = false }) => 
   const soundRef = useRef<Howl | null>(null);
   const requestRef = useRef<number>();
   
+  // Get the audio context to manage multiple players
+  const { activeTrackId, setActiveTrackId } = useAudio();
+  const trackId = track.file; // Use the file name as a unique ID
+  
   // Try to load the file as an MP3 first, then fall back to original format if needed
   const [fileUrl, setFileUrl] = useState(getAudioUrl(track.file));
+
+  // Watch for changes in the active track
+  useEffect(() => {
+    // If another track becomes active and this one is playing, pause this one
+    if (activeTrackId && activeTrackId !== trackId && playing && soundRef.current) {
+      soundRef.current.pause();
+      setPlaying(false);
+    }
+  }, [activeTrackId, trackId, playing]);
 
   useEffect(() => {
     setLoaded(false);
@@ -117,7 +131,13 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ track, compact = false }) => 
     if (playing) {
       soundRef.current.pause();
       setPlaying(false);
+      // Clear active track when pausing
+      if (activeTrackId === trackId) {
+        setActiveTrackId(null);
+      }
     } else {
+      // Set this as the active track before playing
+      setActiveTrackId(trackId);
       soundRef.current.play();
       setPlaying(true);
     }
